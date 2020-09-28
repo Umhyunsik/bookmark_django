@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title%}Bookmark Update {% endblock %}
+{% block content %}
+<!-- method를 get으로 전달할수있지만 주소에 포함되서 넘어가기때문에 보안성문제 아이디 패스워드를 넣어야하면 굉장히 위험
+대부분 post!-->
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+            <input type="submit" value="Update" class="btn btn-info btn-sm">
+    </form>
+
+{% endblock %}
